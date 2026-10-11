@@ -5,6 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: '/smart-fish-26/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
