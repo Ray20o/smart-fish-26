@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-ar: 'IBM Plex Sans Arabic', system-ui, -apple-system, sans-serif;
+    --font-en: 'Inter', system-ui, -apple-system, sans-serif;
+    --color-brand-navy: #003454;
+    --color-brand-navy-dark: #002238;
+    --color-brand-navy-light: #00456c;
+    --color-brand-navy-surface: #003d63;
+    --color-brand-water: #0284c7;
+    --color-brand-accent: #38bdf8;
+  }
+
+  /* Default Arabic Typography (RTL) */
+  html[lang="ar"],
+  html[dir="rtl"] {
+    font-family: var(--font-ar);
+    line-height: 1.7;
+    background-color: #003454;
+    color: #ffffff;
+  }
+
+  /* CRITICAL: Arabic text must NEVER have letter-spacing or uppercase */
+  html[lang="ar"] *,
+  html[dir="rtl"] *,
+  html[lang="ar"] h1,
+  html[lang="ar"] h2,
+  html[lang="ar"] h3,
+  html[lang="ar"] h4,
+  html[lang="ar"] h5,
+  html[lang="ar"] h6,
+  html[lang="ar"] p,
+  html[lang="ar"] span,
+  html[lang="ar"] a,
+  html[lang="ar"] button,
+  html[lang="ar"] nav,
+  html[lang="ar"] label,
+  html[lang="ar"] input,
+  html[lang="ar"] textarea,
+  html[lang="ar"] select {
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+  }
+
+  /* Arabic Specific Line Heights & Apple-like Calm Weights */
+  html[lang="ar"] h1,
+  html[dir="rtl"] h1 {
+    line-height: 1.3;
+    font-weight: 700;
+  }
+
+  html[lang="ar"] h2,
+  html[dir="rtl"] h2 {
+    line-height: 1.35;
+    font-weight: 600;
+  }
+
+  html[lang="ar"] h3,
+  html[dir="rtl"] h3 {
+    line-height: 1.4;
+    font-weight: 600;
+  }
+
+  html[lang="ar"] p,
+  html[dir="rtl"] p {
+    line-height: 1.7;
+    font-weight: 400;
+  }
+
+  /* English Typography (LTR) */
+  html[lang="en"],
+  html[dir="ltr"] {
+    font-family: var(--font-en);
+    line-height: 1.6;
+    background-color: #003454;
+    color: #ffffff;
+  }
+
+  html[lang="en"] h1,
+  html[dir="ltr"] h1 {
+    line-height: 1.15;
+    font-weight: 700;
+  }
+
+  html[lang="en"] h2,
+  html[dir="ltr"] h2 {
+    line-height: 1.25;
+    font-weight: 600;
+  }
+
+  html[lang="en"] p,
+  html[dir="ltr"] p {
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  /* Section scroll offset for fixed header */
+  section {
+    scroll-margin-top: 5.5rem;
+  }
+}
+
+/* Subtle glassmorphism */
+.glass-panel {
+  background: rgba(0, 52, 84, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(0, 69, 108, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  background: rgba(0, 69, 108, 0.4);
+  border-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #002238;
+}
+::-webkit-scrollbar-thumb {
+  background: #00456c;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #005b8e;
+}

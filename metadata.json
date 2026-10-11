@@ -1,0 +1,6 @@
+{
+  "name": "Smart Fish Company | شركة الأسماك الذكية",
+  "description": "الموقع الرسمي لشركة الأسماك الذكية - ريادة الاستزراع المائي من قلب الصحراء بالخرج | Official corporate website of Smart Fish Company, Saudi Arabia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
