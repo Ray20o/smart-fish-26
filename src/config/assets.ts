@@ -33,8 +33,8 @@ export interface ImageAsset {
 export const ASSETS = {
   // Brand Logo (White version for dark navy background)
   logo: {
-    whiteSvg: '/assets/logo-white.svg',
-    whiteMarkSvg: '/assets/logo-mark.svg',
+    whiteSvg: `${import.meta.env.BASE_URL}assets/logo-white.svg`,
+    whiteMarkSvg: `${import.meta.env.BASE_URL}assets/logo-mark.svg`,
     alt: 'Smart Fish Company Logo - شركة الأسماك الذكية',
   },
 
